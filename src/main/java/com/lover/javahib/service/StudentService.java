@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.lover.javahib.service;
 
 
-import com.example.demo.entity.Student;
-import com.example.demo.util.Result;
+import com.lover.javahib.entity.Student;
+import com.lover.javahib.util.Result;
 
 /**
  * 接口层:负责逻辑处理访问数据库层

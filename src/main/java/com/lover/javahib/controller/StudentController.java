@@ -1,8 +1,8 @@
-package com.example.demo.controller;
+package com.lover.javahib.controller;
 
-import com.example.demo.entity.Student;
-import com.example.demo.service.StudentService;
-import com.example.demo.util.Result;
+import com.lover.javahib.entity.Student;
+import com.lover.javahib.service.StudentService;
+import com.lover.javahib.util.Result;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -21,7 +21,7 @@ public class StudentController {
      * @return
      */
     @PostMapping("/student/save")
-    public Result  saveStudent(@RequestBody Student student){
+    public Result saveStudent(@RequestBody Student student){
 
         return studentService.saveStudent(student);
     }

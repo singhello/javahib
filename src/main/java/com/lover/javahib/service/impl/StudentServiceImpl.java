@@ -1,9 +1,9 @@
-package com.example.demo.service.impl;
+package com.lover.javahib.service.impl;
 
-import com.example.demo.dao.StudentRepository;
-import com.example.demo.entity.Student;
-import com.example.demo.service.StudentService;
-import com.example.demo.util.Result;
+import com.lover.javahib.dao.StudentRepository;
+import com.lover.javahib.entity.Student;
+import com.lover.javahib.service.StudentService;
+import com.lover.javahib.util.Result;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -13,7 +13,7 @@ import java.util.List;
  * 接口实现类：负责实现接口里面的抽象方法
  */
 @Service
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
 
     @Resource(name = "studentRepository")
     private StudentRepository repository;

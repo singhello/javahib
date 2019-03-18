@@ -1,6 +1,6 @@
-package com.example.demo.dao;
+package com.lover.javahib.dao;
 
-import com.example.demo.entity.Student;
+import com.lover.javahib.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

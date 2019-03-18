@@ -1,8 +1,6 @@
-package com.example.demo.util;
+package com.lover.javahib.util;
 
-import com.example.demo.entity.Student;
-
-import java.util.List; /**
+/**
  * 封装返回结果对象
  */
 public class Result {
