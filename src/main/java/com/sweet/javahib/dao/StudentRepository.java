@@ -1,7 +1,8 @@
-package com.lover.javahib.dao;
+package com.sweet.javahib.dao;
 
-import com.lover.javahib.entity.Student;
+import com.sweet.javahib.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * 继承JpaRepository<Student, Long>
@@ -10,7 +11,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  *     继承的这个类里面封装了基本的增删改查方法直接调用即可
  */
+@Repository(value = "studentRepository")
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
-
+    Student getStudentById(Long id);
 }

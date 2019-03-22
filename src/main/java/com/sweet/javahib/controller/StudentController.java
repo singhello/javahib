@@ -1,8 +1,8 @@
-package com.lover.javahib.controller;
+package com.sweet.javahib.controller;
 
-import com.lover.javahib.entity.Student;
-import com.lover.javahib.service.StudentService;
-import com.lover.javahib.util.Result;
+import com.sweet.javahib.entity.Student;
+import com.sweet.javahib.service.StudentService;
+import com.sweet.javahib.util.Result;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -31,18 +31,27 @@ public class StudentController {
      * @return
      */
     @GetMapping("/student/list")
-    public Result  getStudentList( Student student){
+    public Result  getStudentList(){
 
-        return studentService.getStudentList(student);
+        return studentService.getStudentList();
     }
 
     /**
      *根据id查询
      * @return
      */
-    @RequestMapping("/student/save")
+    @RequestMapping("/student/select/{id}")
     public Result  getStudentById(@PathVariable Long id){
 
         return studentService.getStudentById(id);
+    }
+
+    /**
+     * 查询所有学生
+     * @return
+     */
+    @GetMapping("student/allList")
+    public Result getAllStudent(){
+        return studentService.getAllStudent();
     }
 }

@@ -1,9 +1,9 @@
-package com.lover.javahib.service.impl;
+package com.sweet.javahib.service.impl;
 
-import com.lover.javahib.dao.StudentRepository;
-import com.lover.javahib.entity.Student;
-import com.lover.javahib.service.StudentService;
-import com.lover.javahib.util.Result;
+import com.sweet.javahib.dao.StudentRepository;
+import com.sweet.javahib.entity.Student;
+import com.sweet.javahib.service.StudentService;
+import com.sweet.javahib.util.Result;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -15,9 +15,8 @@ import java.util.List;
 @Service
 public class StudentServiceImpl implements StudentService {
 
-    @Resource(name = "studentRepository")
+    @Resource
     private StudentRepository repository;
-
 
     /**
      * 保存学生方法实现
@@ -28,21 +27,18 @@ public class StudentServiceImpl implements StudentService {
     public Result saveStudent(Student student) {
 
         repository.save(student);
-
         return new Result((long) 200,"新增成功！");
     }
 
     /**
      * 查询学生列表
-     * @param student
      * @return
      */
     @Override
-    public Result getStudentList(Student student) {
+    public Result getStudentList() {
 
         //查询所有学生列表
         List<Student> list= repository.findAll();
-
         //list为返给前台需要处理的列表数据
         return new Result((long) 200,list);
     }
@@ -54,7 +50,14 @@ public class StudentServiceImpl implements StudentService {
      */
     @Override
     public Result getStudentById(Long id) {
-        Student student = repository.getOne(id);
+        Student student = repository.getStudentById(id);
         return new Result((long) 200,student);
+    }
+
+    @Override
+    public Result getAllStudent() {
+        //查询所有学生列表
+        List<Student> list= repository.findAll();
+        return new Result((long) 200,list);
     }
 }

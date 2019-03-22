@@ -1,8 +1,8 @@
-package com.lover.javahib.service;
+package com.sweet.javahib.service;
 
 
-import com.lover.javahib.entity.Student;
-import com.lover.javahib.util.Result;
+import com.sweet.javahib.entity.Student;
+import com.sweet.javahib.util.Result;
 
 /**
  * 接口层:负责逻辑处理访问数据库层
@@ -17,10 +17,9 @@ public interface StudentService {
 
     /**
      * 查询学生列表
-     * @param student
      * @return
      */
-    Result getStudentList(Student student);
+    Result getStudentList();
 
     /**
      * 根据id查询学生
@@ -28,4 +27,10 @@ public interface StudentService {
      * @return
      */
     Result getStudentById(Long id);
+
+    /**
+     * 查询所有学生
+     * @return
+     */
+    Result getAllStudent();
 }

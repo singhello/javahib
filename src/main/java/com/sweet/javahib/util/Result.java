@@ -1,4 +1,8 @@
-package com.lover.javahib.util;
+package com.sweet.javahib.util;
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 封装返回结果对象
@@ -18,23 +22,20 @@ public class Result {
     /**
      * 返回数据
      */
-    private Object data;
+    private List<Object> data;
 
     public Result(Long code, String msg) {
 
     }
 
     public Result(Long code, Object data) {
+        this.code = code;
+        if(this.data == null){
+            this.data  = new ArrayList<>();
+        }
+        this.data.add(data);
     }
 
-
-    public Object getData() {
-        return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
-    }
 
     public String getMsg() {
         return msg;
@@ -50,5 +51,13 @@ public class Result {
 
     public void setCode(Long code) {
         this.code = code;
+    }
+
+    public List <Object> getData() {
+        return data;
+    }
+
+    public void setData(List <Object> data) {
+        this.data = data;
     }
 }
