@@ -22,7 +22,6 @@ public class StudentController {
      */
     @PostMapping("/student/save")
     public Result saveStudent(@RequestBody Student student){
-
         return studentService.saveStudent(student);
     }
 
@@ -37,7 +36,7 @@ public class StudentController {
     }
 
     /**
-     *根据id查询
+     *根据id查询  操作一遍我看看是哪个方法，是result方法
      * @return
      */
     @RequestMapping("/student/select/{id}")

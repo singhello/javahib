@@ -3,6 +3,7 @@ package com.sweet.javahib.service;
 
 import com.sweet.javahib.entity.Student;
 import com.sweet.javahib.util.Result;
+import org.springframework.data.domain.Pageable;
 
 /**
  * 接口层:负责逻辑处理访问数据库层
@@ -33,4 +34,5 @@ public interface StudentService {
      * @return
      */
     Result getAllStudent();
+//    Page<E> findPage(Example<E> entity, Pageable page);
 }

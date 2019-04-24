@@ -25,9 +25,9 @@ public class StudentServiceImpl implements StudentService {
      */
     @Override
     public Result saveStudent(Student student) {
-
+        System.out.println(student.toString());
         repository.save(student);
-        return new Result((long) 200,"新增成功！");
+        return new Result((long) 200,student);
     }
 
     /**
